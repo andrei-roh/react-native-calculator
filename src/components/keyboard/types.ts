@@ -6,5 +6,6 @@ export type KeyboardProps = PropsWithChildren<{
   keyboardPortraitData: Data[];
   handler: (type: Action, value: string) => void;
   isInitialState: boolean;
-  isRadians: boolean;
+  isRadians?: boolean;
+  isMemory?: boolean;
 }>;

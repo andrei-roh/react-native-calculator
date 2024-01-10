@@ -9,7 +9,6 @@ export const getCalculation = (
   type: Action,
   value: string,
   state: State,
-  isRadians: boolean,
 ): State => {
   switch (type) {
     case Action.Number:
@@ -36,7 +35,8 @@ export const getCalculation = (
     case Action.AllClear:
       return {
         ...initialState,
-        isRadians,
+        isRadians: state.isRadians,
+        memory: state.memory,
       };
     case Action.ChangeSign:
       return {
@@ -55,6 +55,27 @@ export const getCalculation = (
         ...state,
         currentValue: `${Math.pow(parseFloat(state.currentValue), 2)}`,
         result: `${Math.pow(parseFloat(state.currentValue), 2)}`,
+      };
+    case Action.MemoryClear:
+      return {
+        ...state,
+        memory: '0',
+      };
+    case Action.MemoryAddValue:
+      return {
+        ...state,
+        memory: `${parseFloat(state.memory) + parseFloat(state.currentValue)}`,
+      };
+    case Action.MemorySubstractValue:
+      return {
+        ...state,
+        memory: `${parseFloat(state.memory) - parseFloat(state.currentValue)}`,
+      };
+    case Action.MemoryReturn:
+      return {
+        ...state,
+        currentValue: state.memory,
+        result: state.memory,
       };
     case Action.Cube:
       return {
@@ -126,12 +147,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.sin(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.sin(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -140,12 +161,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.asin(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.asin(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -154,12 +175,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.cos(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.cos(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -168,12 +189,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.acos(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.acos(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -182,12 +203,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.tan(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.tan(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -196,12 +217,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.atan(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.atan(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -215,18 +236,18 @@ export const getCalculation = (
     case Action.Mode:
       return {
         ...state,
-        isRadians: !isRadians,
+        isRadians: !state.isRadians,
       };
     case Action.HyperSine:
       return {
         ...state,
         currentValue: `${Math.sinh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.sinh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -235,12 +256,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.asinh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.asinh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -249,12 +270,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.cosh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.cosh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -263,12 +284,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.acosh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.acosh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -277,12 +298,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.tanh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.tanh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
@@ -291,12 +312,12 @@ export const getCalculation = (
       return {
         ...state,
         currentValue: `${Math.atanh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,
         result: `${Math.atanh(
-          isRadians
+          state.isRadians
             ? parseFloat(state.currentValue)
             : getUsingDegrees(parseFloat(state.currentValue)),
         )}`,

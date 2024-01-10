@@ -13,7 +13,7 @@ export const landscapeKeyboardData: Data[] = [
     title: '(',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.LeftBraket,
@@ -24,7 +24,7 @@ export const landscapeKeyboardData: Data[] = [
     title: ')',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.RightBraket,
@@ -35,7 +35,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'mc',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.MemoryClear,
@@ -46,10 +46,10 @@ export const landscapeKeyboardData: Data[] = [
     title: 'm+',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
-    type: Action.MemoryAddPositive,
+    type: Action.MemoryAddValue,
     value: null,
   },
   {
@@ -57,10 +57,10 @@ export const landscapeKeyboardData: Data[] = [
     title: 'm-',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
-    type: Action.MemoryAddNegative,
+    type: Action.MemorySubstractValue,
     value: null,
   },
   {
@@ -68,7 +68,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'mr',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.MemoryReturn,
@@ -83,7 +83,7 @@ export const landscapeKeyboardData: Data[] = [
     title: '2ⁿᵈ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.SecondFunction,
@@ -94,7 +94,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'x²',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Square,
@@ -105,7 +105,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'x³',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Cube,
@@ -116,7 +116,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'xʸ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Degree,
@@ -128,7 +128,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'yˣ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Exponent,
@@ -141,7 +141,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: '2ˣ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.TenInDegree,
@@ -157,7 +157,7 @@ export const landscapeKeyboardData: Data[] = [
     title: '¹/ₓ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.RatioToDivision,
@@ -168,7 +168,7 @@ export const landscapeKeyboardData: Data[] = [
     title: '√x',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.SquareRoot,
@@ -179,7 +179,7 @@ export const landscapeKeyboardData: Data[] = [
     title: '∛x',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.CubeRoot,
@@ -190,7 +190,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'ʸ√x',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.RootByNumber,
@@ -202,7 +202,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'logₓ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Logarithm,
@@ -215,7 +215,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'log₂',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.TenLogarithm,
@@ -231,7 +231,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'x!',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Factorial,
@@ -243,7 +243,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'sin⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Sine,
@@ -256,7 +256,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'cos⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Cosine,
@@ -269,7 +269,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'tan⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Tangent,
@@ -281,7 +281,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'e',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Euler,
@@ -292,7 +292,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'EE',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.EnterExponent,
@@ -308,7 +308,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'Rad',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Mode,
@@ -320,7 +320,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'sinh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.HyperSine,
@@ -333,7 +333,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'cosh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.HyperCosine,
@@ -346,7 +346,7 @@ export const landscapeKeyboardData: Data[] = [
     changeableTitle: 'tanh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.HyperTangent,
@@ -358,7 +358,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'π',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Pi,
@@ -369,7 +369,7 @@ export const landscapeKeyboardData: Data[] = [
     title: 'Rand',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Landscape,
     },
     type: Action.Random,

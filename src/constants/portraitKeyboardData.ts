@@ -1,6 +1,7 @@
 import {
   Action,
   ButtonColor,
+  ButtonPressed,
   ButtonSize,
   ButtonWrapperSize,
   Data,
@@ -13,7 +14,7 @@ export const portraitKeyboardData: Data[] = [
     changeableTitle: 'C',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Additional,
     },
     type: Action.AllClear,
@@ -24,7 +25,7 @@ export const portraitKeyboardData: Data[] = [
     title: '±',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Additional,
     },
     type: Action.ChangeSign,
@@ -35,7 +36,7 @@ export const portraitKeyboardData: Data[] = [
     title: '%',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Additional,
     },
     type: Action.GetPercentage,
@@ -47,8 +48,9 @@ export const portraitKeyboardData: Data[] = [
     isToggler: true,
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Operator,
+      buttonState: ButtonPressed.Operator,
     },
     type: Action.Division,
     value: null,
@@ -58,7 +60,7 @@ export const portraitKeyboardData: Data[] = [
     title: '7',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -69,7 +71,7 @@ export const portraitKeyboardData: Data[] = [
     title: '8',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -80,7 +82,7 @@ export const portraitKeyboardData: Data[] = [
     title: '9',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -92,8 +94,9 @@ export const portraitKeyboardData: Data[] = [
     isToggler: true,
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Operator,
+      buttonState: ButtonPressed.Operator,
     },
     type: Action.Multiplication,
     value: null,
@@ -103,7 +106,7 @@ export const portraitKeyboardData: Data[] = [
     title: '4',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -114,7 +117,7 @@ export const portraitKeyboardData: Data[] = [
     title: '5',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -125,7 +128,7 @@ export const portraitKeyboardData: Data[] = [
     title: '6',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -137,8 +140,9 @@ export const portraitKeyboardData: Data[] = [
     isToggler: true,
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Operator,
+      buttonState: ButtonPressed.Operator,
     },
     type: Action.Subtraction,
     value: null,
@@ -148,7 +152,7 @@ export const portraitKeyboardData: Data[] = [
     title: '1',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -159,7 +163,7 @@ export const portraitKeyboardData: Data[] = [
     title: '2',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -170,7 +174,7 @@ export const portraitKeyboardData: Data[] = [
     title: '3',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -182,8 +186,9 @@ export const portraitKeyboardData: Data[] = [
     isToggler: true,
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Operator,
+      buttonState: ButtonPressed.Operator,
     },
     type: Action.Addition,
     value: null,
@@ -193,7 +198,7 @@ export const portraitKeyboardData: Data[] = [
     title: '0',
     classes: {
       wrapperSize: ButtonWrapperSize.Big,
-      buttonSize: ButtonSize.BigButton,
+      buttonSize: ButtonSize.Big,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -204,7 +209,7 @@ export const portraitKeyboardData: Data[] = [
     title: ',',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Default,
     },
     type: Action.Number,
@@ -215,7 +220,7 @@ export const portraitKeyboardData: Data[] = [
     title: '=',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
-      buttonSize: ButtonSize.DefaultButton,
+      buttonSize: ButtonSize.Default,
       buttonColor: ButtonColor.Operator,
     },
     type: Action.Equal,

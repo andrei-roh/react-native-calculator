@@ -4,6 +4,7 @@ import { Dimensions, SafeAreaView, StyleSheet, View } from 'react-native';
 import { Action, Orientation } from './src/types';
 import {
   getCalculation,
+  getMemoryCompare,
   getOrientation,
   isStatesHaveEqualFields,
 } from './src/utils';
@@ -17,8 +18,9 @@ const App = (): React.JSX.Element => {
   const [data, setData] = useState(initialState);
   const initialOrientation = getOrientation();
   const [orientation, setOrientation] = useState(initialOrientation);
+
   const handleSetData = (type: Action, value: string) => {
-    setData(state => getCalculation(type, value, state, data.isRadians));
+    setData(state => getCalculation(type, value, state));
   };
   const isInitialState = isStatesHaveEqualFields(
     ['currentValue', 'result'],
@@ -42,6 +44,7 @@ const App = (): React.JSX.Element => {
             handler={handleSetData}
             isInitialState={isInitialState}
             isRadians={data.isRadians}
+            isMemory={getMemoryCompare(data.memory)}
           />
         ) : (
           <KeyboardPortrait

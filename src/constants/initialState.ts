@@ -7,4 +7,5 @@ export const initialState: State = {
   isCalculated: true,
   isRadians: false,
   result: '0',
+  memory: '0',
 };

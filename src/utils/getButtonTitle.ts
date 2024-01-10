@@ -1,12 +1,12 @@
 import { Action } from '../types';
 
 export const getButtonTitle = (
+  title: string,
   type: Action,
   isInitialState: boolean,
-  isRadians: boolean,
   isSecondMode: boolean,
-  title: string,
   changeableTitle?: string,
+  isRadians?: boolean,
 ) => {
   if (!changeableTitle) {
     return title;

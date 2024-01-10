@@ -4,8 +4,8 @@ export enum ButtonWrapperSize {
 }
 
 export enum ButtonSize {
-  DefaultButton = 'defaultButton',
-  BigButton = 'bigButton',
+  Default = 'defaultButton',
+  Big = 'bigButton',
 }
 
 export enum ButtonColor {
@@ -13,6 +13,13 @@ export enum ButtonColor {
   Operator = 'operatorColor',
   Additional = 'additionalColor',
   Landscape = 'landscapeColor',
+}
+
+export enum ButtonPressed {
+  Default = 'defaultColorOnPressed',
+  Operator = 'operatorColorOnPressed',
+  Additional = 'additionalColorOnPressed',
+  Landscape = 'landscapeColorOnPressed',
 }
 
 export enum Action {
@@ -29,8 +36,8 @@ export enum Action {
   LeftBraket = '(',
   RightBraket = ')',
   MemoryClear = 'mc',
-  MemoryAddPositive = 'm+',
-  MemoryAddNegative = 'm-',
+  MemoryAddValue = 'm+',
+  MemorySubstractValue = 'm-',
   MemoryReturn = 'mr',
   SecondFunction = '2nd',
   Square = 'squaring',
@@ -75,6 +82,7 @@ export interface State {
   isCalculated: boolean;
   isRadians: boolean;
   result: string;
+  memory: string;
 }
 
 export interface Data {
@@ -86,6 +94,7 @@ export interface Data {
     wrapperSize: ButtonWrapperSize;
     buttonSize: ButtonSize;
     buttonColor: ButtonColor;
+    buttonState?: ButtonPressed;
   };
   type: Action;
   secondType?: Action;

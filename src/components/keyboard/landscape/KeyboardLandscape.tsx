@@ -13,13 +13,19 @@ const KeyboardLandscape = ({
   handler,
   isInitialState,
   isRadians,
+  isMemory,
 }: KeyboardProps): React.JSX.Element => {
   const [toggles, setToggles] = useState(getRadioButtons(keyboardPortraitData));
   const [secondMode, setSecondMode] = useState(false);
   const gap = 20;
   const screen = Dimensions.get('window');
   const defaultButtonSize = 0.1 * screen.width;
-  const longButtonWidth = 0.18 * screen.width;
+  const longButtonWidth = 0.185 * screen.width;
+  const currentStyles = stylesLandscape(
+    gap,
+    defaultButtonSize,
+    longButtonWidth,
+  );
 
   const handleSetToggleState = (id: string) => {
     setToggleState(id, toggles, setToggles);
@@ -42,6 +48,7 @@ const KeyboardLandscape = ({
           handler={handler}
           isInitialState={isInitialState}
           isRadians={isRadians}
+          isMemory={isMemory}
           isSecondMode={secondMode}
           handleSecondMode={handleSetSecondMode}
           id={item.id}
@@ -50,7 +57,7 @@ const KeyboardLandscape = ({
           handleIsPressed={handleSetToggleState}
           changeableTitle={item.changeableTitle}
           orientation={orientation}
-          styles={stylesLandscape(gap, defaultButtonSize, longButtonWidth)}
+          styles={currentStyles}
         />
       )}
       keyExtractor={item => item.id}

@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import { Action, Data, Orientation } from '../../../types';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { portraitKeyboardData } from '../../../constants';
-import { getButtonTitle } from '../../../utils';
+import { getButtonStyle, getButtonTitle } from '../../../utils';
 
 type ButtonProps = PropsWithChildren<
   Pick<
@@ -18,7 +18,8 @@ type ButtonProps = PropsWithChildren<
     value: string;
     handler: (type: Action, value: string) => void;
     isInitialState: boolean;
-    isRadians: boolean;
+    isRadians?: boolean;
+    isMemory?: boolean;
     isSecondMode: boolean;
     handleSecondMode: () => void;
     orientation: Orientation;
@@ -42,6 +43,7 @@ const Button = ({
   handler,
   isInitialState,
   isRadians,
+  isMemory,
   isSecondMode,
   handleSecondMode,
   id,
@@ -51,14 +53,23 @@ const Button = ({
   changeableTitle,
   styles,
 }: ButtonProps): React.JSX.Element => {
-  const { wrapperSize, buttonSize, buttonColor } = classes;
+  const { wrapperSize, buttonSize, buttonColor, buttonState } = classes;
+  const currentStyle = getButtonStyle(
+    styles,
+    buttonSize,
+    buttonColor,
+    type,
+    isPressed,
+    buttonState,
+    isMemory,
+  );
   const currentTitle = getButtonTitle(
+    title,
     type,
     isInitialState,
-    isRadians,
     isSecondMode,
-    title,
     changeableTitle,
+    isRadians,
   );
   const handleOnPress = () => {
     if (type === Action.SecondFunction) {
@@ -78,12 +89,7 @@ const Button = ({
 
   return (
     <View style={styles[wrapperSize]}>
-      <TouchableOpacity
-        style={[
-          styles[buttonSize],
-          styles[isPressed ? `${buttonColor}OnPressed` : buttonColor],
-        ]}
-        onPress={handleOnPress}>
+      <TouchableOpacity style={currentStyle} onPress={handleOnPress}>
         <Text style={isPressed ? styles.textOnPressed : styles.text}>
           {currentTitle}
         </Text>
