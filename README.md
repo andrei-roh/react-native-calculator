@@ -5,5 +5,4 @@
 
 ### Landscape
 
-<img width="414" alt="App in the landscale orientation" src="https://github.com/andrei-roh/react-native-calculator/assets/65450338/566f38d8-c6c2-4127-b676-1079409679f7">
-
+<img width="414" alt="App in the landscale orientation" src="https://github.com/andrei-roh/react-native-calculator/assets/65450338/d88d9e34-84a1-450d-b80d-459d9b58486f">
