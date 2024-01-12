@@ -5,15 +5,15 @@ export const getButtonStyle = (
   buttonSize: ButtonSize,
   buttonColor: ButtonColor,
   type: Action,
-  isPressed?: boolean,
+  isKeyPressed?: boolean,
   buttonState?: ButtonPressed,
-  isMemory?: boolean,
+  isMemoryChanged?: boolean,
 ): Record<string, string | number>[] => {
   let style = [styles[buttonSize]];
 
-  style.push(styles[isPressed && buttonState ? buttonState : buttonColor]);
+  style.push(styles[isKeyPressed && buttonState ? buttonState : buttonColor]);
 
-  if (type === Action.MemoryReturn && isMemory) {
+  if (type === Action.MemoryReturn && isMemoryChanged) {
     style.push(styles.additionalColor);
   }
 

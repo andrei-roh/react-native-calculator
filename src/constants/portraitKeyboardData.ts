@@ -4,14 +4,14 @@ import {
   ButtonPressed,
   ButtonSize,
   ButtonWrapperSize,
-  Data,
+  Keyboard,
 } from '../types';
 
-export const portraitKeyboardData: Data[] = [
+export const portraitKeyboardData: Keyboard[] = [
   {
     id: '197162aa6-6408-4520-9877-da4ab4ad518b',
     title: 'AC',
-    changeableTitle: 'C',
+    secondTitle: 'C',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,

@@ -1,11 +1,10 @@
 import { PropsWithChildren } from 'react';
-import { Action, Data, Orientation } from '../../types';
+import { Action, Keyboard } from '../../types';
 
 export type KeyboardProps = PropsWithChildren<{
-  orientation: Orientation;
-  keyboardPortraitData: Data[];
+  keyboardData: Keyboard[];
   handler: (type: Action, value: string) => void;
   isInitialState: boolean;
   isRadians?: boolean;
-  isMemory?: boolean;
+  isMemoryChanged?: boolean;
 }>;

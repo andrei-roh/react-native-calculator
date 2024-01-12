@@ -52,13 +52,13 @@ exports[`<App /> renders correctly 1`] = `
       data={
         [
           {
-            "changeableTitle": "C",
             "classes": {
               "buttonColor": "additionalColor",
               "buttonSize": "defaultButton",
               "wrapperSize": "defaultWrapper",
             },
             "id": "197162aa6-6408-4520-9877-da4ab4ad518b",
+            "secondTitle": "C",
             "title": "AC",
             "type": "allClear",
             "value": null,

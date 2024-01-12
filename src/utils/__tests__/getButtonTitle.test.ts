@@ -20,16 +20,16 @@ describe('Testing getButtonTitle function', () => {
     const isInitialState = false;
     const isSecondMode = false;
     const title = 'Test Title';
-    const changeableTitle = 'Changed Title';
+    const secondTitle = 'Changed Title';
 
     const received = getButtonTitle(
       title,
       type,
       isInitialState,
       isSecondMode,
-      changeableTitle,
+      secondTitle,
     );
-    const expected = changeableTitle;
+    const expected = secondTitle;
 
     expect(received).toStrictEqual(expected);
   });

@@ -1,9 +1,6 @@
 export const getDisplayingValue = (value: string): string => {
   if (value.slice(-1) === '.') {
-    if (value.length === 1) {
-      return '0,';
-    }
-    return `${parseFloat(value)},`;
+    return value.length === 1 ? '0,' : `${parseFloat(value)},`;
   }
 
   if (value.slice(-2) === '.0') {
@@ -14,5 +11,5 @@ export const getDisplayingValue = (value: string): string => {
     return `${value.replace('.', ',')}`;
   }
 
-  return parseFloat(value).toLocaleString();
+  return value.toLocaleString();
 };

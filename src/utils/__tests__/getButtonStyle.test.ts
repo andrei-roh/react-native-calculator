@@ -33,14 +33,14 @@ describe('Testing getButtonStyle function', () => {
     const buttonSize = ButtonSize.Big;
     const buttonColor = ButtonColor.Default;
     const buttonColorOnPressed = undefined;
-    const isPressed = false;
+    const isKeyPressed = false;
 
     const received = getButtonStyle(
       styles,
       buttonSize,
       buttonColor,
       Action.Division,
-      isPressed,
+      isKeyPressed,
       buttonColorOnPressed,
     );
     const expected = [
@@ -57,14 +57,14 @@ describe('Testing getButtonStyle function', () => {
     const buttonSize = ButtonSize.Big;
     const buttonColor = ButtonColor.Operator;
     const buttonColorOnPressed = ButtonPressed.Operator;
-    const isPressed = true;
+    const isKeyPressed = true;
 
     const received = getButtonStyle(
       styles,
       buttonSize,
       buttonColor,
       Action.Addition,
-      isPressed,
+      isKeyPressed,
       buttonColorOnPressed,
     );
     const expected = [
@@ -81,17 +81,17 @@ describe('Testing getButtonStyle function', () => {
     const buttonSize = ButtonSize.Big;
     const buttonColor = ButtonColor.Operator;
     const buttonColorOnPressed = ButtonPressed.Operator;
-    const isPressed = true;
-    const isMemory = true;
+    const isKeyPressed = true;
+    const isMemoryChanged = true;
 
     const received = getButtonStyle(
       styles,
       buttonSize,
       buttonColor,
       Action.MemoryReturn,
-      isPressed,
+      isKeyPressed,
       buttonColorOnPressed,
-      isMemory,
+      isMemoryChanged,
     );
     const expected = [
       {

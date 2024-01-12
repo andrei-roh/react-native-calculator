@@ -3,7 +3,7 @@ import { Action, State } from '../../types';
 import { enteringEqual } from './enteringEqual';
 import { enteringNumber } from './enteringNumber';
 import { getFactorial } from './getFactorial';
-import { getUsingDegrees } from './getUsingDegrees';
+import { getTrigonometricFunction } from './getTrigonometricFunction';
 
 export const getCalculation = (
   type: Action,
@@ -146,86 +146,86 @@ export const getCalculation = (
     case Action.Sine:
       return {
         ...state,
-        currentValue: `${Math.sin(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.sin(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.Sine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.Sine,
+          state.isRadians,
+        ),
       };
     case Action.InverseSine:
       return {
         ...state,
-        currentValue: `${Math.asin(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.asin(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseSine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseSine,
+          state.isRadians,
+        ),
       };
     case Action.Cosine:
       return {
         ...state,
-        currentValue: `${Math.cos(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.cos(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.Cosine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.Cosine,
+          state.isRadians,
+        ),
       };
     case Action.InverseCosine:
       return {
         ...state,
-        currentValue: `${Math.acos(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.acos(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseCosine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseCosine,
+          state.isRadians,
+        ),
       };
     case Action.Tangent:
       return {
         ...state,
-        currentValue: `${Math.tan(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.tan(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.Tangent,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.Tangent,
+          state.isRadians,
+        ),
       };
     case Action.InverseTangent:
       return {
         ...state,
-        currentValue: `${Math.atan(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.atan(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseTangent,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseTangent,
+          state.isRadians,
+        ),
       };
     case Action.Euler:
       return {
@@ -241,86 +241,86 @@ export const getCalculation = (
     case Action.HyperSine:
       return {
         ...state,
-        currentValue: `${Math.sinh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.sinh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperSine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperSine,
+          state.isRadians,
+        ),
       };
     case Action.InverseHyperSine:
       return {
         ...state,
-        currentValue: `${Math.asinh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.asinh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperSine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperSine,
+          state.isRadians,
+        ),
       };
     case Action.HyperCosine:
       return {
         ...state,
-        currentValue: `${Math.cosh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.cosh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperCosine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperCosine,
+          state.isRadians,
+        ),
       };
     case Action.InverseHyperCosine:
       return {
         ...state,
-        currentValue: `${Math.acosh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.acosh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperCosine,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperCosine,
+          state.isRadians,
+        ),
       };
     case Action.HyperTangent:
       return {
         ...state,
-        currentValue: `${Math.tanh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.tanh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperTangent,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.HyperTangent,
+          state.isRadians,
+        ),
       };
     case Action.InverseHyperTangent:
       return {
         ...state,
-        currentValue: `${Math.atanh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
-        result: `${Math.atanh(
-          state.isRadians
-            ? parseFloat(state.currentValue)
-            : getUsingDegrees(parseFloat(state.currentValue)),
-        )}`,
+        currentValue: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperTangent,
+          state.isRadians,
+        ),
+        result: getTrigonometricFunction(
+          state.currentValue,
+          Action.InverseHyperTangent,
+          state.isRadians,
+        ),
       };
     case Action.Pi:
       return {

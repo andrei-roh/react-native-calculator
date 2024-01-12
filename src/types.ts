@@ -67,12 +67,12 @@ export enum Action {
   TwoInDegree = 'twoInDegree',
   NumberLogaritm = 'logByBase',
   TwoLogarithm = 'log2',
-  InverseSine = 'sin-1',
-  InverseCosine = 'cos-1',
-  InverseTangent = 'tan-1',
-  InverseHyperSine = 'sinh-1',
-  InverseHyperCosine = 'cosh-1',
-  InverseHyperTangent = 'tanh-1',
+  InverseSine = 'asin',
+  InverseCosine = 'acos',
+  InverseTangent = 'atan',
+  InverseHyperSine = 'asinh',
+  InverseHyperCosine = 'acosh',
+  InverseHyperTangent = 'atanh',
 }
 
 export interface State {
@@ -85,10 +85,10 @@ export interface State {
   memory: string;
 }
 
-export interface Data {
+export interface Keyboard {
   id: string;
   title: string;
-  changeableTitle?: string;
+  secondTitle?: string;
   isToggler?: boolean;
   classes: {
     wrapperSize: ButtonWrapperSize;

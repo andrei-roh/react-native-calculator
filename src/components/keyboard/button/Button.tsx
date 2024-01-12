@@ -1,57 +1,55 @@
 import React from 'react';
 import { PropsWithChildren } from 'react';
-import { Action, Data, Orientation } from '../../../types';
+import { Action, Keyboard } from '../../../types';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { portraitKeyboardData } from '../../../constants';
 import { getButtonStyle, getButtonTitle } from '../../../utils';
 
 type ButtonProps = PropsWithChildren<
   Pick<
-    Data,
-    | 'title'
-    | 'classes'
-    | 'type'
-    | 'changeableTitle'
-    | 'isToggler'
-    | 'secondType'
+    Keyboard,
+    'title' | 'classes' | 'type' | 'secondTitle' | 'isToggler' | 'secondType'
   > & {
     value: string;
     handler: (type: Action, value: string) => void;
     isInitialState: boolean;
-    isRadians?: boolean;
-    isMemory?: boolean;
     isSecondMode: boolean;
     handleSecondMode: () => void;
-    orientation: Orientation;
     styles: Record<string, Record<string, string | number>>;
     id: string;
-    isPressed?: boolean;
-    handleIsPressed?: (id: string) => void;
+    isRadians?: boolean;
+    isMemoryChanged?: boolean;
+    isKeyPressed?: boolean;
+    handlePressed?: (id: string) => void;
   }
 >;
 
-const radioButtonsIds = portraitKeyboardData
-  .filter(element => element.isToggler)
-  .map(filtred => filtred.id);
+const radioButtonsIds = portraitKeyboardData.reduce((result, button) => {
+  if (button.isToggler) {
+    result.push(button.id);
+  }
+
+  return result;
+}, [] as string[]);
 
 const Button = ({
   title,
   classes,
   type,
+  secondTitle,
+  isToggler,
   secondType,
   value,
   handler,
   isInitialState,
-  isRadians,
-  isMemory,
   isSecondMode,
   handleSecondMode,
-  id,
-  isToggler,
-  isPressed,
-  handleIsPressed,
-  changeableTitle,
   styles,
+  id,
+  isRadians,
+  isMemoryChanged,
+  isKeyPressed,
+  handlePressed,
 }: ButtonProps): React.JSX.Element => {
   const { wrapperSize, buttonSize, buttonColor, buttonState } = classes;
   const currentStyle = getButtonStyle(
@@ -59,16 +57,16 @@ const Button = ({
     buttonSize,
     buttonColor,
     type,
-    isPressed,
+    isKeyPressed,
     buttonState,
-    isMemory,
+    isMemoryChanged,
   );
   const currentTitle = getButtonTitle(
     title,
     type,
     isInitialState,
     isSecondMode,
-    changeableTitle,
+    secondTitle,
     isRadians,
   );
   const handleOnPress = () => {
@@ -77,11 +75,11 @@ const Button = ({
     }
 
     if (isToggler) {
-      handleIsPressed?.(id);
+      handlePressed?.(id);
     }
 
     if (radioButtonsIds.indexOf(id) === -1) {
-      handleIsPressed?.('');
+      handlePressed?.('');
     }
 
     handler(secondType && isSecondMode ? secondType : type, value);
@@ -90,7 +88,7 @@ const Button = ({
   return (
     <View style={styles[wrapperSize]}>
       <TouchableOpacity style={currentStyle} onPress={handleOnPress}>
-        <Text style={isPressed ? styles.textOnPressed : styles.text}>
+        <Text style={isKeyPressed ? styles.textOnPressed : styles.text}>
           {currentTitle}
         </Text>
       </TouchableOpacity>

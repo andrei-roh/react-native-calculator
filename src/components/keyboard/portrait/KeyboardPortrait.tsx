@@ -8,12 +8,11 @@ import { getRadioButtons } from '../../../utils/getRadioButtons';
 import { setToggleState } from '../../../utils';
 
 const KeyboardPortrait = ({
-  orientation,
-  keyboardPortraitData,
+  keyboardData,
   handler,
   isInitialState,
 }: KeyboardProps): React.JSX.Element => {
-  const [toggles, setToggles] = useState(getRadioButtons(keyboardPortraitData));
+  const [toggles, setToggles] = useState(getRadioButtons(keyboardData));
   const [secondMode, setSecondMode] = useState(false);
   const gap = 15;
   const screen = Dimensions.get('window');
@@ -30,26 +29,25 @@ const KeyboardPortrait = ({
 
   return (
     <FlatList
-      data={keyboardPortraitData}
+      data={keyboardData}
       numColumns={4}
       renderItem={({ item }) => (
         <Button
           title={item.title}
           classes={item.classes}
           type={item.type}
+          secondTitle={item.secondTitle}
+          isToggler={item.isToggler}
           secondType={item.secondType}
           value={item.value ?? ''}
           handler={handler}
           isInitialState={isInitialState}
           isSecondMode={secondMode}
           handleSecondMode={handleSetSecondMode}
-          id={item.id}
-          isToggler={item.isToggler}
-          isPressed={toggles.get(item.id)}
-          handleIsPressed={handleSetToggleState}
-          changeableTitle={item.changeableTitle}
-          orientation={orientation}
           styles={currentStyles}
+          id={item.id}
+          isKeyPressed={toggles.get(item.id)}
+          handlePressed={handleSetToggleState}
         />
       )}
       keyExtractor={item => item.id}

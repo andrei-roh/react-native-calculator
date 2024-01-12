@@ -5,16 +5,16 @@ export const getButtonTitle = (
   type: Action,
   isInitialState: boolean,
   isSecondMode: boolean,
-  changeableTitle?: string,
+  secondTitle?: string,
   isRadians?: boolean,
 ) => {
-  if (!changeableTitle) {
+  if (!secondTitle) {
     return title;
   }
 
   switch (type) {
     case Action.AllClear:
-      return isInitialState ? title : changeableTitle;
+      return isInitialState ? title : secondTitle;
     case Action.Exponent:
     case Action.TenInDegree:
     case Action.Logarithm:
@@ -25,9 +25,9 @@ export const getButtonTitle = (
     case Action.HyperSine:
     case Action.HyperCosine:
     case Action.HyperTangent:
-      return !isSecondMode ? title : changeableTitle;
+      return !isSecondMode ? title : secondTitle;
     case Action.Mode:
-      return isRadians ? title : changeableTitle;
+      return isRadians ? title : secondTitle;
     default:
       return title;
   }

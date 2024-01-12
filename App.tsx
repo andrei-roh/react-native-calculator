@@ -4,7 +4,7 @@ import { Dimensions, SafeAreaView, StyleSheet, View } from 'react-native';
 import { Action, Orientation } from './src/types';
 import {
   getCalculation,
-  getMemoryCompare,
+  isMemoryChanged,
   getOrientation,
   isStatesHaveEqualFields,
 } from './src/utils';
@@ -39,17 +39,15 @@ const App = (): React.JSX.Element => {
         <Display data={data} orientation={orientation} />
         {orientation === Orientation.Landscape ? (
           <KeyboardLandscape
-            orientation={orientation}
-            keyboardPortraitData={landscapeKeyboardData}
+            keyboardData={landscapeKeyboardData}
             handler={handleSetData}
             isInitialState={isInitialState}
             isRadians={data.isRadians}
-            isMemory={getMemoryCompare(data.memory)}
+            isMemoryChanged={isMemoryChanged(data.memory)}
           />
         ) : (
           <KeyboardPortrait
-            orientation={orientation}
-            keyboardPortraitData={portraitKeyboardData}
+            keyboardData={portraitKeyboardData}
             handler={handleSetData}
             isInitialState={isInitialState}
             isRadians={data.isRadians}

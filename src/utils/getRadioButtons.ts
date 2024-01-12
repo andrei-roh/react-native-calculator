@@ -1,8 +1,12 @@
-import { Data } from '../types';
+import { Keyboard } from '../types';
 
-export const getRadioButtons = (data: Data[]): Map<string, boolean> =>
+export const getRadioButtons = (keyboard: Keyboard[]): Map<string, boolean> =>
   new Map(
-    data
-      .filter(element => element.isToggler)
-      .map(filtred => [filtred.id, false]),
+    keyboard.reduce((result, button) => {
+      if (button.isToggler) {
+        result.push([button.id, false]);
+      }
+
+      return result;
+    }, [] as [string, boolean][]),
   );

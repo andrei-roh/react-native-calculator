@@ -4,10 +4,10 @@ import {
   ButtonColor,
   ButtonSize,
   ButtonWrapperSize,
-  Data,
+  Keyboard,
 } from '../types';
 
-export const landscapeKeyboardData: Data[] = [
+export const landscapeKeyboardData: Keyboard[] = [
   {
     id: 'b425cc41-de1f-47bf-968f-55a54d09e30d',
     title: '(',
@@ -125,7 +125,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '86b4b5de-df32-4fc4-9908-f907bb95d4ba',
     title: 'eˣ',
-    changeableTitle: 'yˣ',
+    secondTitle: 'yˣ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -138,7 +138,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: 'e85d4fbe-d346-4ec4-96ae-69a3e715dcfc',
     title: '10ˣ',
-    changeableTitle: '2ˣ',
+    secondTitle: '2ˣ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -199,7 +199,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '763d689a-a1b8-46ae-b98d-d4cdcbc5c877',
     title: 'ln',
-    changeableTitle: 'logₓ',
+    secondTitle: 'logₓ',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -212,7 +212,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '71379094-1210-43cf-9764-40394e2b95e0',
     title: 'log₁₀',
-    changeableTitle: 'log₂',
+    secondTitle: 'log₂',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -240,7 +240,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '541595dd-f040-41e7-ac88-2fbbe71575d2',
     title: 'sin',
-    changeableTitle: 'sin⁻¹',
+    secondTitle: 'sin⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -253,7 +253,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: 'bb7bb393-c5c7-4150-a4e6-56dfa8b58fb4',
     title: 'cos',
-    changeableTitle: 'cos⁻¹',
+    secondTitle: 'cos⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -266,7 +266,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '709e4fd3-e948-400e-9d16-136b0492106e',
     title: 'tan',
-    changeableTitle: 'tan⁻¹',
+    secondTitle: 'tan⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -305,7 +305,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '987721ad-f8a9-490d-9101-adc4198fd9cc',
     title: 'Deg',
-    changeableTitle: 'Rad',
+    secondTitle: 'Rad',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -317,7 +317,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '881b9278-3bd4-42f8-9f26-5ad0b28ec12a',
     title: 'sinh',
-    changeableTitle: 'sinh⁻¹',
+    secondTitle: 'sinh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -330,7 +330,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '9489945e-def4-4a4c-8d8c-50b83457e980',
     title: 'cosh',
-    changeableTitle: 'cosh⁻¹',
+    secondTitle: 'cosh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
@@ -343,7 +343,7 @@ export const landscapeKeyboardData: Data[] = [
   {
     id: '7035dd2a-f7f5-496e-97b0-24d0d52fe8e3',
     title: 'tanh',
-    changeableTitle: 'tanh⁻¹',
+    secondTitle: 'tanh⁻¹',
     classes: {
       wrapperSize: ButtonWrapperSize.Default,
       buttonSize: ButtonSize.Default,
