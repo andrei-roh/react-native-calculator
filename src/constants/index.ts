@@ -1,2 +1,2 @@
-export { initialState } from './initialState';
-export { portraitKeyboardData } from './portraitKeyboardData';
+export { INITIAL_STATE } from './INITIAL_STATE';
+export { PORTRAIT_KEYBOARD_DATA } from './PORTRAIT_KEYBOARD_DATA';

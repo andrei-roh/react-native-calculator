@@ -7,7 +7,7 @@ import {
   Keyboard,
 } from '../types';
 
-export const portraitKeyboardData: Keyboard[] = [
+export const PORTRAIT_KEYBOARD_DATA: Keyboard[] = [
   {
     id: '197162aa6-6408-4520-9877-da4ab4ad518b',
     title: 'AC',

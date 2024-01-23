@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { getRadioButtons } from '../getRadioButtons';
-import { portraitKeyboardData } from '../../constants';
+import { PORTRAIT_KEYBOARD_DATA } from '../../constants';
 
 describe('Testing getRadioButtons function', () => {
   it('should return correct Map with radio buttons ids', () => {
@@ -10,7 +10,7 @@ describe('Testing getRadioButtons function', () => {
       ['7737de9d-9e22-4bb6-8124-bd2349566e1c', false],
       ['75586991-9ee9-40b1-b5e1-dfedabd7282d', false],
     ];
-    const received = getRadioButtons(portraitKeyboardData);
+    const received = getRadioButtons(PORTRAIT_KEYBOARD_DATA);
     const expected = new Map(data.map(([id, state]) => [id, state]));
 
     expect(received).toStrictEqual(expected);

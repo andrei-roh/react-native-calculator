@@ -1,4 +1,4 @@
-import { portraitKeyboardData } from '.';
+import { PORTRAIT_KEYBOARD_DATA } from '.';
 import {
   Action,
   ButtonColor,
@@ -7,7 +7,7 @@ import {
   Keyboard,
 } from '../types';
 
-export const landscapeKeyboardData: Keyboard[] = [
+export const LANDSCAPE_KEYBOARD_DATA: Keyboard[] = [
   {
     id: 'b425cc41-de1f-47bf-968f-55a54d09e30d',
     title: '(',
@@ -74,10 +74,10 @@ export const landscapeKeyboardData: Keyboard[] = [
     type: Action.MemoryReturn,
     value: null,
   },
-  portraitKeyboardData[0],
-  portraitKeyboardData[1],
-  portraitKeyboardData[2],
-  portraitKeyboardData[3],
+  PORTRAIT_KEYBOARD_DATA[0],
+  PORTRAIT_KEYBOARD_DATA[1],
+  PORTRAIT_KEYBOARD_DATA[2],
+  PORTRAIT_KEYBOARD_DATA[3],
   {
     id: '1b157547-20f4-4cd5-877c-fb24addb8e32',
     title: '2ⁿᵈ',
@@ -148,10 +148,10 @@ export const landscapeKeyboardData: Keyboard[] = [
     secondType: Action.TwoInDegree,
     value: null,
   },
-  portraitKeyboardData[4],
-  portraitKeyboardData[5],
-  portraitKeyboardData[6],
-  portraitKeyboardData[7],
+  PORTRAIT_KEYBOARD_DATA[4],
+  PORTRAIT_KEYBOARD_DATA[5],
+  PORTRAIT_KEYBOARD_DATA[6],
+  PORTRAIT_KEYBOARD_DATA[7],
   {
     id: 'f606ffc5-2939-4843-b570-024128955837',
     title: '¹/ₓ',
@@ -222,10 +222,10 @@ export const landscapeKeyboardData: Keyboard[] = [
     secondType: Action.TwoLogarithm,
     value: null,
   },
-  portraitKeyboardData[8],
-  portraitKeyboardData[9],
-  portraitKeyboardData[10],
-  portraitKeyboardData[11],
+  PORTRAIT_KEYBOARD_DATA[8],
+  PORTRAIT_KEYBOARD_DATA[9],
+  PORTRAIT_KEYBOARD_DATA[10],
+  PORTRAIT_KEYBOARD_DATA[11],
   {
     id: '83f3d8e3-a0ca-4cfc-84eb-46c561aadab6',
     title: 'x!',
@@ -298,10 +298,10 @@ export const landscapeKeyboardData: Keyboard[] = [
     type: Action.EnterExponent,
     value: null,
   },
-  portraitKeyboardData[12],
-  portraitKeyboardData[13],
-  portraitKeyboardData[14],
-  portraitKeyboardData[15],
+  PORTRAIT_KEYBOARD_DATA[12],
+  PORTRAIT_KEYBOARD_DATA[13],
+  PORTRAIT_KEYBOARD_DATA[14],
+  PORTRAIT_KEYBOARD_DATA[15],
   {
     id: '987721ad-f8a9-490d-9101-adc4198fd9cc',
     title: 'Deg',
@@ -375,7 +375,7 @@ export const landscapeKeyboardData: Keyboard[] = [
     type: Action.Random,
     value: null,
   },
-  portraitKeyboardData[16],
-  portraitKeyboardData[17],
-  portraitKeyboardData[18],
+  PORTRAIT_KEYBOARD_DATA[16],
+  PORTRAIT_KEYBOARD_DATA[17],
+  PORTRAIT_KEYBOARD_DATA[18],
 ];

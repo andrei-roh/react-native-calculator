@@ -83,6 +83,8 @@ export interface State {
   isRadians: boolean;
   result: string;
   memory: string;
+  valueBeforeBrakets: string | null;
+  actionBeforeBrakets: Action;
 }
 
 export interface Keyboard {

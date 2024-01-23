@@ -1,6 +1,6 @@
-import { initialState } from '../constants';
+import { INITIAL_STATE } from '../constants';
 
 export const isMemoryChanged = (
   memory: string,
-  comparableMemory = initialState.memory,
+  comparableMemory = INITIAL_STATE.memory,
 ) => memory.localeCompare(comparableMemory) !== 0;

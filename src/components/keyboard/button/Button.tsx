@@ -2,7 +2,7 @@ import React from 'react';
 import { PropsWithChildren } from 'react';
 import { Action, Keyboard } from '../../../types';
 import { Text, TouchableOpacity, View } from 'react-native';
-import { portraitKeyboardData } from '../../../constants';
+import { PORTRAIT_KEYBOARD_DATA } from '../../../constants';
 import { getButtonStyle, getButtonTitle } from '../../../utils';
 
 type ButtonProps = PropsWithChildren<
@@ -24,7 +24,7 @@ type ButtonProps = PropsWithChildren<
   }
 >;
 
-const radioButtonsIds = portraitKeyboardData.reduce((result, button) => {
+const radioButtonsIds = PORTRAIT_KEYBOARD_DATA.reduce((result, button) => {
   if (button.isToggler) {
     result.push(button.id);
   }

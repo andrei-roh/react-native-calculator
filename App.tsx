@@ -10,12 +10,12 @@ import {
 } from './src/utils';
 import KeyboardPortrait from './src/components/keyboard/portrait/KeyboardPortrait';
 import Display from './src/components/display/Display';
-import { initialState, portraitKeyboardData } from './src/constants';
-import { landscapeKeyboardData } from './src/constants/landscapeKeyboardData';
+import { INITIAL_STATE, PORTRAIT_KEYBOARD_DATA } from './src/constants';
+import { LANDSCAPE_KEYBOARD_DATA } from './src/constants/LANDSCAPE_KEYBOARD_DATA';
 import KeyboardLandscape from './src/components/keyboard/landscape/KeyboardLandscape';
 
 const App = (): React.JSX.Element => {
-  const [data, setData] = useState(initialState);
+  const [data, setData] = useState(INITIAL_STATE);
   const initialOrientation = getOrientation();
   const [orientation, setOrientation] = useState(initialOrientation);
 
@@ -39,7 +39,7 @@ const App = (): React.JSX.Element => {
         <Display data={data} orientation={orientation} />
         {orientation === Orientation.Landscape ? (
           <KeyboardLandscape
-            keyboardData={landscapeKeyboardData}
+            keyboardData={LANDSCAPE_KEYBOARD_DATA}
             handler={handleSetData}
             isInitialState={isInitialState}
             isRadians={data.isRadians}
@@ -47,7 +47,7 @@ const App = (): React.JSX.Element => {
           />
         ) : (
           <KeyboardPortrait
-            keyboardData={portraitKeyboardData}
+            keyboardData={PORTRAIT_KEYBOARD_DATA}
             handler={handleSetData}
             isInitialState={isInitialState}
             isRadians={data.isRadians}

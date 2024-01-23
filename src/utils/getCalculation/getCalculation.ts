@@ -1,4 +1,4 @@
-import { initialState } from '../../constants';
+import { INITIAL_STATE } from '../../constants';
 import { Action, State } from '../../types';
 import { enteringEqual } from './enteringEqual';
 import { enteringNumber } from './enteringNumber';
@@ -34,7 +34,7 @@ export const getCalculation = (
       return enteringEqual(state);
     case Action.AllClear:
       return {
-        ...initialState,
+        ...INITIAL_STATE,
         isRadians: state.isRadians,
         memory: state.memory,
       };
@@ -55,6 +55,23 @@ export const getCalculation = (
         ...state,
         currentValue: `${Math.pow(parseFloat(state.currentValue), 2)}`,
         result: `${Math.pow(parseFloat(state.currentValue), 2)}`,
+      };
+    case Action.LeftBraket:
+      return {
+        ...state,
+        action: Action.Empty,
+        valueBeforeBrakets: state.previousValue,
+        actionBeforeBrakets: state.action,
+      };
+    case Action.RightBraket:
+      const braketsState = enteringEqual(state);
+
+      return {
+        ...state,
+        action: state.actionBeforeBrakets,
+        previousValue: state.valueBeforeBrakets,
+        currentValue: braketsState.currentValue,
+        result: braketsState.result,
       };
     case Action.MemoryClear:
       return {
