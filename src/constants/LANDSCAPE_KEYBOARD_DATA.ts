@@ -4,10 +4,10 @@ import {
   ButtonColor,
   ButtonSize,
   ButtonWrapperSize,
-  Keyboard,
+  IKeyboard,
 } from '../types';
 
-export const LANDSCAPE_KEYBOARD_DATA: Keyboard[] = [
+export const LANDSCAPE_KEYBOARD_DATA: IKeyboard[] = [
   {
     id: 'b425cc41-de1f-47bf-968f-55a54d09e30d',
     title: '(',

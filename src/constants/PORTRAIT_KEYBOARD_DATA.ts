@@ -4,10 +4,10 @@ import {
   ButtonPressed,
   ButtonSize,
   ButtonWrapperSize,
-  Keyboard,
+  IKeyboard,
 } from '../types';
 
-export const PORTRAIT_KEYBOARD_DATA: Keyboard[] = [
+export const PORTRAIT_KEYBOARD_DATA: IKeyboard[] = [
   {
     id: '197162aa6-6408-4520-9877-da4ab4ad518b',
     title: 'AC',

@@ -1,13 +1,13 @@
 import React from 'react';
 import { PropsWithChildren } from 'react';
-import { Action, Keyboard } from '../../../types';
+import { Action, IKeyboard } from '../../../types';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { PORTRAIT_KEYBOARD_DATA } from '../../../constants';
 import { getButtonStyle, getButtonTitle } from '../../../utils';
 
 type ButtonProps = PropsWithChildren<
   Pick<
-    Keyboard,
+    IKeyboard,
     'title' | 'classes' | 'type' | 'secondTitle' | 'isToggler' | 'secondType'
   > & {
     value: string;

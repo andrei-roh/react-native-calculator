@@ -1,6 +1,6 @@
-import { State } from '../../types';
+import { IState } from '../../types';
 
-export const enteringNumber = (value: string, state: State): State => {
+export const enteringNumber = (value: string, state: IState): IState => {
   if (state.currentValue === '0' && value === '.') {
     return { ...state, currentValue: `0${value}`, isCalculated: false };
   }

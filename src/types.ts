@@ -75,7 +75,7 @@ export enum Action {
   InverseHyperTangent = 'atanh',
 }
 
-export interface State {
+export interface IState {
   currentValue: string;
   action: Action;
   previousValue: string | null;
@@ -87,7 +87,7 @@ export interface State {
   actionBeforeBrakets: Action;
 }
 
-export interface Keyboard {
+export interface IKeyboard {
   id: string;
   title: string;
   secondTitle?: string;

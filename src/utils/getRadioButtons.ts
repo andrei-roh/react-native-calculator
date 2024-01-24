@@ -1,6 +1,6 @@
-import { Keyboard } from '../types';
+import { IKeyboard } from '../types';
 
-export const getRadioButtons = (keyboard: Keyboard[]): Map<string, boolean> =>
+export const getRadioButtons = (keyboard: IKeyboard[]): Map<string, boolean> =>
   new Map(
     keyboard.reduce((result, button) => {
       if (button.isToggler) {

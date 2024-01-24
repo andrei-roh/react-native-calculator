@@ -1,6 +1,6 @@
-import { Action, State } from '../../types';
+import { Action, IState } from '../../types';
 
-export const enteringEqual = (state: State): State => {
+export const enteringEqual = (state: IState): IState => {
   const { currentValue, previousValue, action } = state;
 
   const current = parseFloat(currentValue);

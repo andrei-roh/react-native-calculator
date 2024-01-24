@@ -1,3 +1,2 @@
-export const getUsingDegrees = (angle: number): number => {
-  return angle * (Math.PI / 180);
-};
+export const getUsingDegrees = (angle: number): number =>
+  angle * (Math.PI / 180);

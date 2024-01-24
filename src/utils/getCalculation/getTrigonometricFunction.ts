@@ -34,6 +34,7 @@ export const getTrigonometricFunction = (
 
   if (isInverse) {
     const result = Math[type](parseFloat(value));
+
     return `${isRadians ? result : getUsingRadians(result)}`;
   }
 

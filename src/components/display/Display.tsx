@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from 'react';
 import { Text, View } from 'react-native';
-import { Orientation, State } from '../../types';
+import { Orientation, IState } from '../../types';
 import styles from './styles';
 import { getDisplayingValue } from '../../utils';
 
 type KeyboardProps = PropsWithChildren<{
-  data: State;
+  data: IState;
   orientation: Orientation;
 }>;
 

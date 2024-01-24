@@ -1,6 +1,6 @@
-import { Action, State } from '../types';
+import { Action, IState } from '../types';
 
-export const INITIAL_STATE: State = {
+export const INITIAL_STATE: IState = {
   currentValue: '0',
   action: Action.Empty,
   previousValue: null,

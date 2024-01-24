@@ -1,5 +1,5 @@
 import { INITIAL_STATE } from '../../constants';
-import { Action, State } from '../../types';
+import { Action, IState } from '../../types';
 import { enteringEqual } from './enteringEqual';
 import { enteringNumber } from './enteringNumber';
 import { getFactorial } from './getFactorial';
@@ -8,8 +8,8 @@ import { getTrigonometricFunction } from './getTrigonometricFunction';
 export const getCalculation = (
   type: Action,
   value: string,
-  state: State,
-): State => {
+  state: IState,
+): IState => {
   switch (type) {
     case Action.Number:
       return enteringNumber(value, state);
