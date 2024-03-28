@@ -1,4 +1,4 @@
-import { PORTRAIT_KEYBOARD_DATA } from '.';
+import { PORTRAIT_KEYBOARD_DATA } from '../constants';
 import {
   Action,
   ButtonColor,

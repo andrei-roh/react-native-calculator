@@ -11,7 +11,7 @@ import {
 import KeyboardPortrait from './src/components/keyboard/portrait/KeyboardPortrait';
 import Display from './src/components/display/Display';
 import { INITIAL_STATE, PORTRAIT_KEYBOARD_DATA } from './src/constants';
-import { LANDSCAPE_KEYBOARD_DATA } from './src/constants/LANDSCAPE_KEYBOARD_DATA';
+import { LANDSCAPE_KEYBOARD_DATA } from './src/constants/landscapeKeyboardData';
 import KeyboardLandscape from './src/components/keyboard/landscape/KeyboardLandscape';
 
 const App = (): React.JSX.Element => {
